@@ -1,6 +1,6 @@
-import Image from "next/image"
 import fs from "fs"
 import Link from "next/link"
+import Posts from "./components/Posts"
 
 export const getPostMetadata = (path: string) => {
   const folder = path
@@ -16,19 +16,26 @@ export const getPostContent = (path: string) => {
 }
 
 export default function Home() {
-  const postMetadata = getPostMetadata("posts/")
+  /* const postMetadata = getPostMetadata("posts/")
   const postPreviews = postMetadata.map((slug) => (
     <div key={slug}>
       <Link href={`/posts/${slug}`}>
         <h2>Post: {slug}</h2>
       </Link>
     </div>
-  ))
+  )) */
+
+  const card = (
+    <div className='p-4'>
+      <h1 className='text-3xl mb-4'>Latest Posts</h1>
+      <Posts />
+    </div>
+  )
 
   return (
     <div className='flex flex-col flex-wrap items-center p-4'>
       <h2>Main page</h2>
-      {postPreviews}
+      {card}
     </div>
 
     /* <div className="min-h-screen relative">

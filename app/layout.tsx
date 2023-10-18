@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   const header = (
     <header>
-      <nav className='bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 min-h-fit opacity-90'>
+      <nav className='bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 min-h-fit opacity-95'>
         <div className='max-w-screen flex flex-wrap flex-col items-center justify-between mx-auto p-4 md:flex-row'>
           <Link href='/' className='flex items-center'>
             <Image
@@ -28,7 +28,7 @@ export default function RootLayout({
               height={40}
               width={40}
             ></Image>
-            <span className='self-center text-2xl font-semibold whitespace-nowrap dark:text-white'>
+            <span className='self-center text-2xl whitespace-nowrap dark:text-white'>
               Vuorivillen Kennel
             </span>
           </Link>
