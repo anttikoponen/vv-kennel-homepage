@@ -18,12 +18,12 @@ export default function RootLayout({
 }) {
   const header = (
     <header>
-      <nav className='bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700'>
-        <div className='max-w-screen flex flex-wrap items-center justify-between mx-auto p-4'>
+      <nav className='bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 min-h-fit opacity-90'>
+        <div className='max-w-screen flex flex-wrap flex-col items-center justify-between mx-auto p-4 md:flex-row'>
           <Link href='/' className='flex items-center'>
             <Image
               src='/pystykorva.jpg'
-              className='h-8 mr-3 rounded-lg'
+              className='h-8 mx-3 rounded-full'
               alt='Pystykorva Logo'
               height={40}
               width={40}
@@ -33,20 +33,18 @@ export default function RootLayout({
             </span>
           </Link>
 
-          <div className='hidden w-full md:block md:w-auto mr-3'>
+          <div className='w-auto mr-3'>
             <ul
-              className='flex flex-col font-medium text-2xl p-4 md:p-0 mt-4 border 
-            border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 
-            md:my-2 md:border-0 md:bg-white dark:bg-gray-800 
-            md:dark:bg-gray-900 dark:border-gray-700'
+              className='flex flex-row font-medium text-xl p-1 mt-2 space-x-3 my-2 md:border-0 md:bg-white 
+            md:dark:bg-gray-900'
             >
               <li>
                 <Link
                   href='/'
-                  className='block py-2 pl-3 pr-4 text-white 
-                  bg-blue-700 rounded md:bg-transparent 
-                  md:text-blue-700 md:p-0 md:dark:text-blue-500 
-                  dark:bg-blue-600 md:dark:bg-transparent'
+                  className='block py-2 pl-3 pr-4  
+                  rounded md:bg-transparent 
+                text-blue-700 md:p-0 md:dark:text-blue-500 
+                   md:dark:bg-transparent'
                   aria-current='page'
                 >
                   Etusivu
@@ -98,17 +96,17 @@ export default function RootLayout({
     </header>
   )
   const footer = (
-    <footer>
+    <footer className='footer footer-center mx-auto bottom-0 static'>
       <div>
-        <h1>Antti Koponen TMI</h1>
+        <header className='footer-title'>Antti Koponen TMI</header>
       </div>
     </footer>
   )
 
   return (
     <html lang='en'>
-      <body className={inter.className}>
-        <div>
+      <body>
+        <div className='flex flex-col min-w-screen max-w-screen min-h-screen'>
           {header}
           {children}
           {footer}
