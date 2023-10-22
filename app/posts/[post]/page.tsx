@@ -1,8 +1,10 @@
 const PostPage = (props: any) => {
-  const slug = props.params.slug
+  const post = props.params.slug
+
   return (
     <div>
-      <h1>This is a post {slug} </h1>
+      <h1>This is a new post {post} </h1>
+      <p></p>
     </div>
   )
 }

@@ -18,12 +18,12 @@ export default function RootLayout({
 }) {
   const header = (
     <header>
-      <nav className='bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 min-h-fit opacity-95'>
+      <nav className='bg-white border-gray-200 dark:bg-green-950 dark:border-gray-700 min-h-fit opacity-95 items-center'>
         <div className='max-w-screen flex flex-wrap flex-col items-center justify-between mx-auto p-4 md:flex-row'>
           <Link href='/' className='flex items-center'>
             <Image
               src='/pystykorva.jpg'
-              className='h-8 mx-3 rounded-full'
+              className='h-auto w-auto mx-3 rounded-full'
               alt='Pystykorva Logo'
               height={40}
               width={40}
@@ -74,6 +74,18 @@ export default function RootLayout({
                   Meidän koirat
                 </Link>
               </li>
+              <li>
+                <Link
+                  href='/galleria'
+                  className='block py-2 pl-3 pr-4 text-gray-900 rounded 
+                  hover:bg-gray-100 md:hover:bg-transparent md:border-0 
+                  md:hover:text-blue-700 md:p-0 dark:text-white 
+                  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 
+                  dark:hover:text-white md:dark:hover:bg-transparent'
+                >
+                  Galleria
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -96,9 +108,9 @@ export default function RootLayout({
     </header>
   )
   const footer = (
-    <footer className='footer footer-center mx-auto bottom-0 static'>
-      <div>
-        <header className='footer-title'>Antti Koponen TMI</header>
+    <footer className=' w-screen bottom-0 bg-green-800 h-40'>
+      <div className='flex flex-row items-center justify-center h-full'>
+        <p className=' font-bold'>Antti Koponen TMI</p>
       </div>
     </footer>
   )

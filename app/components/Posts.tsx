@@ -1,6 +1,6 @@
 import React from "react"
 import Card from "./Card"
-import { posts } from "../data" // Import your data
+import { posts } from "../data" // Cards data
 
 const Posts: React.FC = () => {
   return (
